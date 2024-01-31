@@ -1,0 +1,8 @@
+export class CustomError extends Error {
+  public status: number;
+  constructor(msg: string, status: number) {
+    super(msg);
+    this.status = status;
+    Object.setPrototypeOf(this, CustomError.prototype);
+  }
+}
